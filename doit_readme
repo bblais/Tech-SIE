@@ -1,0 +1,3 @@
+#!/usr/bin/env csh
+ipython nbconvert --to markdown Prologue/Prologue.ipynb
+mv -f Prologue.md README.md
