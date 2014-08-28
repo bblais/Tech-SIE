@@ -23,9 +23,9 @@
 # ------
 # 
 # 
-# * [**Prologue:**](https://raw.githubusercontent.com/bblais/Tech-SIE/master/Prologue/Prologue.ipynb) What is this document?
-# * [**Introduction:**](https://raw.githubusercontent.com/bblais/Tech-SIE/master/Introduction/Introduction.ipynb) A little history, and introduction to the perspective taken in the book.
-# * [**Mean, Known Deviation:**](https://raw.githubusercontent.com/bblais/Tech-SIE/master/Estimating_Mean_Known_Deviation/Estimating_Mean_Known_Deviation.ipynb) Where we estimate the mean (i.e. true value), knowing the deviation.
+# * [**Prologue:**](http://nbviewer.ipython.org/github/bblais/Tech-SIE/blob/master/Prologue/Prologue.ipynb) What is this document?
+# * [**Introduction:**](http://nbviewer.ipython.org/github/bblais/Tech-SIE/blob/master/Introduction/Introduction.ipynb) A little history, and introduction to the perspective taken in the book.
+# * [**Mean, Known Deviation:**](http://nbviewer.ipython.org/github/bblais/Tech-SIE/blob/master/Estimating_Mean_Known_Deviation/Estimating_Mean_Known_Deviation.ipynb) Where we estimate the mean (i.e. true value), knowing the deviation.
 # * **Mean and the Deviation** 
 # * **Proportion** 
 # * **Difference Between Means**
