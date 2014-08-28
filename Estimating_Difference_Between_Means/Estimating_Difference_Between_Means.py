@@ -62,30 +62,30 @@
 # e^{-(X-\mu_x)^2/2\sigma_x^2}\times e^{-(X-Z-\mu_y)^2/2\sigma_y^2} 
 # \end{eqnarray}
 # One can do some pretty boring algebra at this point (factoring the exponents),
-# or use a program like {\tt xmaxima}:
+# or use a program like *xmaxima*:
 # 
 # 
 
-# <rawcell>
+# <markdowncell>
 
-# (C1) ASSUME_POS:TRUE;
-# (D1)                                 TRUE
-# (C2) 1/(2*%PI)/sx/sy*integrate(exp(-(x-xo)^2/(2*sx^2))*
-#            exp(-(x-z-yo)^2/(2*sy^2)),x,-inf,inf);
+#     (C1) ASSUME_POS:TRUE;
+#     (D1)                                 TRUE
+#     (C2) 1/(2*%PI)/sx/sy*integrate(exp(-(x-xo)^2/(2*sx^2))*
+#                exp(-(x-z-yo)^2/(2*sy^2)),x,-inf,inf);
 # 
-#                          2                       2               2
-#                         z  + (2 yo - 2 xo) z + yo  - 2 xo yo + xo
-#                       - ------------------------------------------
-#                                           2       2
-#                                       2 sy  + 2 sx
-#             SQRT(2) %E
-# (D2)        ------------------------------------------------------
-#                                             2     2
-#                          2 SQRT(%PI) SQRT(sy  + sx )
+#                              2                       2               2
+#                             z  + (2 yo - 2 xo) z + yo  - 2 xo yo + xo
+#                           - ------------------------------------------
+#                                               2       2
+#                                           2 sy  + 2 sx
+#                 SQRT(2) %E
+#     (D2)        ------------------------------------------------------
+#                                                 2     2
+#                              2 SQRT(%PI) SQRT(sy  + sx )
 # 
-# (C3) factor(z^2+(2*yo-2*xo)*z+yo^2-2*xo*yo+xo^2);
-#                                              2
-# (D3)                            (z + yo - xo)
+#     (C3) factor(z^2+(2*yo-2*xo)*z+yo^2-2*xo*yo+xo^2);
+#                                                  2
+#     (D3)                            (z + yo - xo)
 
 # <markdowncell>
 
@@ -108,8 +108,8 @@
 # 
 # Changing variables to $\delta_k$, it is clear that the likelihood for
 # $\delta_k$ is the same form as $\delta_x$ and $\delta_y$.  Thus we have the
-# {\em exact same} results on the paired difference, both for known and unknown
-# $\sigma$, quoted in Section~\ref{app:ztest} and ~\ref{app:ttest}.
+# *exact same* results on the paired difference, both for known and unknown
+# $\sigma$, quoted in z-test and t-test sections.
 # 
 
 # <markdowncell>
@@ -138,41 +138,41 @@
 # e^{-m(\bar{y}-\mu_y)^2/2\sigma_y^2} 
 # \end{eqnarray}
 # 
-# Again, using {\tt xmaxima}
+# Again, using *xmaxima*,
 
-# <rawcell>
+# <markdowncell>
 
-# (C1) ASSUME_POS:TRUE;
+#     (C1) ASSUME_POS:TRUE;
 # 
-# (D1)                                 TRUE
-# (C2) f(d):=sqrt(n*m)/(2*%PI*sx*sy)*integrate(exp(-n*(xbar-d-my)^2/(2*sx^2))*
-#                   exp(-m*(ybar-my)^2/(2*sy^2)),my,-inf,inf);
-# f(d);
+#     (D1)                                 TRUE
+#     (C2) f(d):=sqrt(n*m)/(2*%PI*sx*sy)*integrate(exp(-n*(xbar-d-my)^2/(2*sx^2))*
+#                       exp(-m*(ybar-my)^2/(2*sy^2)),my,-inf,inf);
+#     f(d);
 # 
-#                                                             2
-#               SQRT(n m)                (- n) (xbar - d - my)
-# (D2) f(d) := ----------- INTEGRATE(EXP(----------------------)
-#              2 %PI sx sy                           2
-#                                                2 sx
+#                                                                 2
+#                   SQRT(n m)                (- n) (xbar - d - my)
+#     (D2) f(d) := ----------- INTEGRATE(EXP(----------------------)
+#                  2 %PI sx sy                           2
+#                                                    2 sx
 # 
-#                                                             2
-#                                            (- m) (ybar - my)
-#                                        EXP(------------------), my, - INF, INF)
+#                                                                 2
+#                                                (- m) (ybar - my)
+#                                            EXP(------------------), my, - INF, INF)
+#                                                          2
+#                                                      2 sy
+#     (C3) 
 #                                                      2
-#                                                  2 sy
-# (C3) 
-#                                                  2
-# (D3) SQRT(2) SQRT(m) SQRT(n) EXPT(%E, - (m n ybar
+#     (D3) SQRT(2) SQRT(m) SQRT(n) EXPT(%E, - (m n ybar
 # 
-#                                            2                   2
-#  + (- 2 m n xbar + 2 d m n) ybar + m n xbar  - 2 d m n xbar + d  m n)
+#                                                2                   2
+#      + (- 2 m n xbar + 2 d m n) ybar + m n xbar  - 2 d m n xbar + d  m n)
 # 
-#         2         2                         2       2
-# /(2 n sy  + 2 m sx ))/(2 SQRT(%PI) SQRT(n sy  + m sx ))
-# (C4) factor((m*n)*ybar^2+(-2*m*n*xbar+2*d*m*n)*ybar+m*n*xbar^2-2*d*m*n*xbar+m*n*d^2);
+#             2         2                         2       2
+#     /(2 n sy  + 2 m sx ))/(2 SQRT(%PI) SQRT(n sy  + m sx ))
+#     (C4) factor((m*n)*ybar^2+(-2*m*n*xbar+2*d*m*n)*ybar+m*n*xbar^2-2*d*m*n*xbar+m*n*d^2);
 # 
-#                                                  2
-# (D4)                        m n (ybar - xbar + d)
+#                                                      2
+#     (D4)                        m n (ybar - xbar + d)
 
 # <markdowncell>
 
