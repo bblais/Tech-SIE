@@ -43,10 +43,10 @@
 # \end{eqnarray}
 # 
 # The *prior* information, $p(\mu|\sigma,I)$, about the value we want to
-# estimate, $mu$, will be as non-informative as possible (we are really ignorant
+# estimate, $\mu$, will be as non-informative as possible (we are really ignorant
 # of its value).  Thus, we use a uniform distribution:
 # \begin{eqnarray}
-# p(\mu|\sigma,I)= p(\mu|I)&=&\left\{\begin{array}{cc}A & \mu_{\rm min}\le \mu \le
+# p(\mu|\sigma,I)= p(\mu|I)&=&\left[\begin{array}{cc}A & \mu_{\rm min}\le \mu \le
 # \mu_{\rm max} \\
 # 0 & \mbox{otherwise}\end{array}\right.
 # \end{eqnarray}
