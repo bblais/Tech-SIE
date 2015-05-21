@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
 
-# <markdowncell>
+# coding: utf-8
 
 # #Statistical Inference for Everyone: Technical Supplement
 # 
@@ -12,14 +10,11 @@
 # <img  src="http://web.bryant.edu/~bblais/images/Saturn_with_Dice.png" align=center width = 250px />
 # 
 # [Statistical Inference for Everyone]: http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html
-
-# <markdowncell>
+# 
 
 # ## Estimating the mean and standard deviation
 # 
 # This derivation is taken directly from (Sivia, 1996), with some of the steps filled in and elaborated by me.
-
-# <markdowncell>
 
 # ### Setting up the Problem
 # 
@@ -45,8 +40,7 @@
 # p(\mu,\sigma|\bvec{x},I) &\propto& p(\bvec{x}|\mu,\sigma,I) p(\mu,\sigma|I) \\
 # p(\bvec{x}|\mu,\sigma,I)&=&\left(\frac{1}{\sqrt{2\pi\sigma^2}}\right)^N
 # e^{\frac{1}{-2\sigma^2}\sum_{k=1}^{N} (x_k-\mu)^2}\\
-# p(\mu,\sigma|I)&=&\left\{\begin{array}{cc}{\rm constant} & \sigma>0 \\
-# 0 & \mbox{otherwise}\end{array}\right.
+# p(\mu,\sigma|I)&=&{\rm constant} \mbox{ for } \sigma>0 
 # \end{eqnarray}
 # 
 # Plugging into the posterior for the mean we get
@@ -74,8 +68,7 @@
 # \end{eqnarray}
 # and the Gaussian integral tricks.
 # 
-
-# <markdowncell>
+# 
 
 # ### Estimating the Mean
 # 
@@ -117,8 +110,7 @@
 # \bar{x}&=& \frac{1}{N} \sum_{k=1}^{N} x_k \\
 # S^2&=& \frac{1}{(N-1)}\sum_{k=1}^{N} (x_k-\mu)^2 
 # \end{eqnarray}
-
-# <markdowncell>
+# 
 
 # ### A More Convenient Form
 # 
@@ -157,8 +149,7 @@
 # This variable $t$ has exactly the standard t-distribution with $N-1$ degrees
 # of freedom, in a form which can be readily looked up.
 # 
-
-# <markdowncell>
+# 
 
 # ### Estimating $\sigma$
 # 
@@ -202,8 +193,7 @@
 # {\rm width}&=&-\left[\left.\frac{d^2L}{d\sigma^2}\right|_{\hat{\sigma}}\right]^{-1/2} \\
 # &=& \frac{\hat{\sigma}}{\sqrt{2(N-1)}}
 # \end{eqnarray}
-
-# <markdowncell>
+# 
 
 # ### Summary
 # 
@@ -216,15 +206,16 @@
 # \sigma&=& S^2 \pm \frac{S^2}{\sqrt{2(N-1)}}
 # \end{eqnarray}
 # 
+# 
 
-# <codecell>
+# In[11]:
 
 
-# <markdowncell>
+
 
 # ---------------------
 
-# <codecell>
+# In[8]:
 
 from IPython.core.display import HTML
 
