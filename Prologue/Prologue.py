@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
 
-# <markdowncell>
+# coding: utf-8
 
 # #Statistical Inference for Everyone: Technical Supplement
 # 
@@ -35,11 +33,9 @@
 # * [**Linear Regresssion:**](http://nbviewer.ipython.org/github/bblais/Tech-SIE/blob/master/Linear_Regression/Linear_Regression.ipynb) Where we introduce the simple form of linear regression, and derive the posteriors for the slope and intercept.
 # * **Objective Priors**
 
-# <markdowncell>
-
 # ---------------------
 
-# <codecell>
+# In[8]:
 
 from IPython.core.display import HTML
 

@@ -60,7 +60,7 @@
 # for each data point, with a {\em known} $\sigma$, then we have
 # \begin{eqnarray}
 # p(x_k|\mu,\sigma,I)&=&\frac{1}{\sqrt{2\pi\sigma^2}}e^{-(x_k -
-# \mu)^2/2\sigma^2}\\
+# \mu)^2/2\sigma^2}\\\\
 # p(\bvec{x}|\mu,\sigma,I)&=&\prod_{k=1}^{N}
 # \frac{1}{\sqrt{2\pi\sigma^2}}e^{-(x_k - \mu)^2/2\sigma^2} 
 # \end{eqnarray}
@@ -85,12 +85,12 @@
 # The maximum is found by setting the first derivative to zero, getting the
 # obvious result.
 # \begin{eqnarray}
-# \frac{dL(y)}{dy}&=&-y/\sigma^2 = 0 \\
+# \frac{dL(y)}{dy}&=&-y/\sigma^2 = 0 \\\\
 # \Rightarrow y&=& 0 
 # \end{eqnarray}
 # If we look at the second derivative, we get
 # \begin{eqnarray}
-# \frac{d^2L(y)}{dy^2}&=&-\frac{1}{\sigma^2} \\
+# \frac{d^2L(y)}{dy^2}&=&-\frac{1}{\sigma^2} \\\\
 # \Rightarrow \sigma&=& \left(-\frac{d^2L(y)}{dy^2}\right)^{-1/2}
 # \end{eqnarray}
 # 
@@ -106,17 +106,17 @@
 # 
 # \begin{eqnarray}
 # p(\mu|\bvec{x},\sigma,I) &\propto& p(\{x_{k}\}|\mu,\sigma,I) \cdot
-# p(\mu|\sigma,I) \\
+# p(\mu|\sigma,I) \\\\
 # &\propto& \prod_{k=1}^{N} \frac{1}{\sqrt{2\pi\sigma^2}}e^{-(x_k -
-# \mu)^2/2\sigma^2} \\
+# \mu)^2/2\sigma^2} \\\\
 # L(\mu|x_1,x_2,\cdots,x_n,\sigma,I) &=&{\rm constant} - \sum_{k=1}^{N} (x_k -
 # \mu)^2/2\sigma^2
 # \end{eqnarray}
 # The best estimate, $\hat{\mu}$, is that which maximizes $L$
 # \begin{eqnarray}
 # \left.\frac{dL}{d\mu}\right|_{\hat{\mu}} &=& + \frac{1}{\sigma^2}\sum_{k=1}^{N} (x_k -
-# \mu)|_{\hat{\mu}} =0\\
-# \sum_{k=1}^{N} x_k - \sum_{k=1}^{N} \hat{\mu} &=&0 \\
+# \mu)|_{\hat{\mu}} =0\\\\
+# \sum_{k=1}^{N} x_k - \sum_{k=1}^{N} \hat{\mu} &=&0 \\\\
 # \hat{\mu}&=&\frac{\sum_{k=1}^{N} x_k}{N} 
 # \end{eqnarray}
 # which is just the sample mean.  If we denote 1 standard deviation confidence
@@ -125,8 +125,8 @@
 # the confidence interval, is related to the second derivative of $L$.
 # \begin{eqnarray}
 # \sigma_{\mu}&=&
-# \left(-\left.\frac{d^2L(y)}{d\mu^2}\right|_{\hat{\mu}}\right)^{-1/2} \\ 
-# \left.\frac{d^2L(y)}{d\mu^2}\right|_{\hat{\mu}} &=& -\frac{N}{\sigma^2} \\
+# \left(-\left.\frac{d^2L(y)}{d\mu^2}\right|_{\hat{\mu}}\right)^{-1/2} \\\\ 
+# \left.\frac{d^2L(y)}{d\mu^2}\right|_{\hat{\mu}} &=& -\frac{N}{\sigma^2} \\\\
 # \sigma_{\mu}&=&\frac{\sigma}{\sqrt{N}}
 # \end{eqnarray}
 # 
@@ -136,7 +136,7 @@
 # $\bvec{x}\equiv \left\{x_k\right\}$ and the standard deviation of the likelihood, $\sigma$, is 
 # 
 # \begin{eqnarray}
-# \mu &=& \frac{\sum_{k=1}^{N} x_k}{N} \pm \frac{\sigma}{\sqrt{N}} \\
+# \mu &=& \frac{\sum_{k=1}^{N} x_k}{N} \pm \frac{\sigma}{\sqrt{N}} \\\\
 # &\equiv& \bar{x}\pm \frac{\sigma}{\sqrt{N}}
 # \end{eqnarray}
 #     

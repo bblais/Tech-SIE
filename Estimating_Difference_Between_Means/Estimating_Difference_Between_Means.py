@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
 
-# <markdowncell>
+# coding: utf-8
 
 # #Statistical Inference for Everyone: Technical Supplement
 # 
@@ -12,12 +10,10 @@
 # <img  src="http://web.bryant.edu/~bblais/images/Saturn_with_Dice.png" align=center width = 250px />
 # 
 # [Statistical Inference for Everyone]: http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html
-
-# <markdowncell>
+# 
 
 # ## Estimating the Paired-Data Difference Between Means, $\delta_k \equiv x_k-y_k$
-
-# <markdowncell>
+# 
 
 # $\newcommand{\bvec}[1]{\mathbf{#1}}$
 # 
@@ -31,27 +27,26 @@
 # $y_k$:
 # \begin{eqnarray}
 # p(x_k|\mu,\sigma_x,I)&=&\frac{1}{\sqrt{2\pi\sigma_x^2}}e^{-(x_k -
-# \mu_x)^2/2\sigma_x^2}\\
+# \mu_x)^2/2\sigma_x^2}\\\\
 # p(y_k|\mu,\sigma_y,I)&=&\frac{1}{\sqrt{2\pi\sigma_y^2}}e^{-(y_k -
 # \mu_y)^2/2\sigma_y^2}
 # \end{eqnarray}
 # 
 # Now we need to find the likelihood function for $\delta_k \equiv x_k-y_k$. 
-
-# <markdowncell>
+# 
 
 # ### Changing Variables
 # 
 # If we have $Z=f(X,Y)$, and we know about $X$ and $Y$, we can learn about $Z$.
 # \begin{eqnarray}
-# p(Z|I)&=&\int \int p(Z|X,Y,I) \times p(X,Y|I) dXdY \\
+# p(Z|I)&=&\int \int p(Z|X,Y,I) \times p(X,Y|I) dXdY \\\\
 # &=&\int \int \delta(Z-f(X,Y)) \times p(X,Y|I) dXdY
 # \end{eqnarray}
 # 
 # Say, $Z=X-Y$, and $X$ and $Y$ are independent, then $p(X,Y|I)=p(X|I)p(Y|I)$
 # and we have 
 # \begin{eqnarray}
-# p(Z|I) &=& \int dX p(X,I) \int dY p(Y|I)\delta(Z-X+Y) \\
+# p(Z|I) &=& \int dX p(X,I) \int dY p(Y|I)\delta(Z-X+Y) \\\\
 # &=&  \int dX p(X,I)p(Y=X-Z|I)
 # \end{eqnarray}
 # 
@@ -65,8 +60,7 @@
 # or use a program like *xmaxima*:
 # 
 # 
-
-# <markdowncell>
+# 
 
 #     (C1) ASSUME_POS:TRUE;
 #     (D1)                                 TRUE
@@ -86,8 +80,7 @@
 #     (C3) factor(z^2+(2*yo-2*xo)*z+yo^2-2*xo*yo+xo^2);
 #                                                  2
 #     (D3)                            (z + yo - xo)
-
-# <markdowncell>
+# 
 
 # 
 # So we get
@@ -95,14 +88,13 @@
 # \begin{eqnarray}
 # p(Z|I) &=&
 # \frac{1}{\sqrt{2\pi(\sigma_x^2+\sigma_y^2)}}
-# e^{-(z-(\mu_x-\mu_y))^2/2(\sigma_x^2+\sigma_y^2)} \\
+# e^{-(z-(\mu_x-\mu_y))^2/2(\sigma_x^2+\sigma_y^2)} \\\\
 # &=&\frac{1}{\sqrt{2\pi\sigma_z}}
-# e^{-(z-\mu_z)^2/2\sigma_z} \\ \mbox{ where }
-# \mu_z&\equiv& \mu_x-\mu_y \\
+# e^{-(z-\mu_z)^2/2\sigma_z} \\\\ \mbox{ where }
+# \mu_z&\equiv& \mu_x-\mu_y \\\\
 # \sigma_z^2&\equiv&\sigma_x^2+\sigma_y^2
 # \end{eqnarray}
-
-# <markdowncell>
+# 
 
 # ### Continuing with Paired Data
 # 
@@ -111,12 +103,9 @@
 # *exact same* results on the paired difference, both for known and unknown
 # $\sigma$, quoted in z-test and t-test sections.
 # 
-
-# <markdowncell>
+# 
 
 # ## Difference of Means, $\delta\equiv \mu_x - \mu_y$, known $\sigma_x$ and $\sigma_y$
-
-# <markdowncell>
 
 # Again, the change of variables trick works, but since we are given the means
 # ($\mu_x$ and $\mu_y$) we need to use the posterior distributions,
@@ -124,7 +113,7 @@
 # 
 # \begin{eqnarray}
 # p(\mu_x|\bvec{x},\sigma_x,I)&=& 
-# \sqrt{\frac{n}{2\pi \sigma_x^2}}e^{-n(\bar{x}-\mu_x)^2/2\sigma_x^2} \\
+# \sqrt{\frac{n}{2\pi \sigma_x^2}}e^{-n(\bar{x}-\mu_x)^2/2\sigma_x^2} \\\\
 # p(\mu_y|\bvec{y},\sigma_y,I)&=& 
 # \sqrt{\frac{m}{2\pi \sigma_y^2}}e^{-n(\bar{y}-\mu_y)^2/2\sigma_y^2}
 # \end{eqnarray}
@@ -139,8 +128,7 @@
 # \end{eqnarray}
 # 
 # Again, using *xmaxima*,
-
-# <markdowncell>
+# 
 
 #     (C1) ASSUME_POS:TRUE;
 # 
@@ -173,8 +161,7 @@
 # 
 #                                                      2
 #     (D4)                        m n (ybar - xbar + d)
-
-# <markdowncell>
+# 
 
 # Rewritten, this is
 # 
@@ -193,39 +180,37 @@
 # \frac{1}{\sqrt{2\pi\sigma_\delta^2}}
 #     e^{-(\delta-\mu_\delta)^2/2\sigma_\delta^2}
 # \end{eqnarray}
-
-# <markdowncell>
+# 
 
 # ## Difference of Means, $\delta\equiv \mu_x - \mu_y$, unknown $\sigma_x$ and $\sigma_y$
-
-# <markdowncell>
 
 # Making definitions as before for the $t$ distribution for each variable
 # 
 # \begin{eqnarray}
-# t_x&\equiv&\frac{\mu_x-\bar{x}}{S_x/\sqrt{n}} \\
-# t_y&\equiv&\frac{\mu_y-\bar{y}}{S_y/\sqrt{n}} \\
-# S_x^2&\equiv&\frac{1}{(n-1)}\sum_{k=1}^{n} (x_k-\mu_x)^2 \\
+# t_x&\equiv&\frac{\mu_x-\bar{x}}{S_x/\sqrt{n}} \\\\
+# t_y&\equiv&\frac{\mu_y-\bar{y}}{S_y/\sqrt{n}} \\\\
+# S_x^2&\equiv&\frac{1}{(n-1)}\sum_{k=1}^{n} (x_k-\mu_x)^2 \\\\
 # S_y^2&\equiv&\frac{1}{(m-1)}\sum_{k=1}^{m} (y_k-\mu_y)^2
 # \end{eqnarray}
 # From the addition of variables we get
 # \begin{eqnarray}
-# t&\equiv&\frac{\delta-(\bar{x}-\bar{y})}{\sqrt{S_x^2/m+S_y^2/n}} \\
+# t&\equiv&\frac{\delta-(\bar{x}-\bar{y})}{\sqrt{S_x^2/m+S_y^2/n}} \\\\
 # \tan \theta &\equiv& \frac{S_x/\sqrt{n}}{S_y/\sqrt{m}}
 # \end{eqnarray}
 # 
 # $\tan \theta$ depends on the data, and $t_x$, and $t_y$ are known, so the
 # distribution for $t$ should be known.  It is named the Behren's distribution.
 # 
+# 
 
-# <codecell>
+# In[1]:
 
 
-# <markdowncell>
+
 
 # ---------------------
 
-# <codecell>
+# In[2]:
 
 from IPython.core.display import HTML
 

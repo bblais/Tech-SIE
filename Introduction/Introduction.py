@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
 
-# <markdowncell>
+# coding: utf-8
 
 # #Statistical Inference for Everyone: Technical Supplement
 # 
@@ -12,14 +10,11 @@
 # <img  src="http://web.bryant.edu/~bblais/images/Saturn_with_Dice.png" align=center width = 250px />
 # 
 # [Statistical Inference for Everyone]: http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html
-
-# <markdowncell>
+# 
 
 # ## Chapter 1
 # 
 # ## Introduction
-
-# <markdowncell>
 
 # ### History
 # 
@@ -35,14 +30,14 @@
 # 
 # 
 # \begin{eqnarray}
-# p(A|C) + p(\bar{A}|C) &=& 1 \\
+# p(A|C) + p(\bar{A}|C) &=& 1 \\\\
 # p(AB|C) &=& p(A|BC)p(B|C)
 # \end{eqnarray}
 # 
 # from there, given the obvious symmetry $p(AB|C)=p(BA|C)$ we get 
 # 
 # \begin{eqnarray}
-# p(A|BC)p(B) &=& p(B|AC)p(A) \\
+# p(A|BC)p(B) &=& p(B|AC)p(A) \\\\
 # p(A|BC) &=& \frac{p(B|AC)p(A)}{p(B)}
 # \end{eqnarray}
 # 
@@ -72,8 +67,7 @@
 # experiment, and thus does not have a limiting frequency other than 0 or 1.
 # 
 # 
-
-# <markdowncell>
+# 
 
 # ### Response
 # 
@@ -120,8 +114,7 @@
 # translation in many very useful cases.
 # 
 # 
-
-# <markdowncell>
+# 
 
 # ### Procedure
 # 
@@ -147,7 +140,7 @@
 # \begin{eqnarray}
 # \overbrace{p({\rm parameter}|{\rm data},I)}^{\rm posterior} &=& \frac{\overbrace{p({\rm data}|{\rm
 # parameter},I)}^{\rm likelihood}\overbrace{p({\rm parameter}|I)}^{\rm
-# prior}}{\underbrace{p({\rm data}|I)}_{\rm normalization}} \\
+# prior}}{\underbrace{p({\rm data}|I)}_{\rm normalization}} \\\\
 # &\propto& \overbrace{p({\rm data}|{\rm
 # parameter},I)}^{\rm likelihood}\overbrace{p({\rm parameter}|I)}^{\rm
 # prior}
@@ -165,13 +158,11 @@
 # trick.  When all else fails, we can find the estimate numerically from the
 # posterior. 
 # 
-
-# <markdowncell>
+# 
 
 # ### Orthodox Hypothesis Tests
 # 
-
-# <markdowncell>
+# 
 
 # Much of orthodox hypothesis testing can be interpreted in a much more
 # straightforward way with the Bayesian approach.  For example, the $p$ value
@@ -209,15 +200,16 @@
 # 
 # 
 # 
+# 
 
-# <codecell>
+# In[ ]:
 
 
-# <markdowncell>
+
 
 # ---------------------
 
-# <codecell>
+# In[8]:
 
 from IPython.core.display import HTML
 
@@ -227,6 +219,8 @@ def css_styling():
     return HTML(styles)
 css_styling()
 
-# <codecell>
+
+# In[ ]:
+
 
 

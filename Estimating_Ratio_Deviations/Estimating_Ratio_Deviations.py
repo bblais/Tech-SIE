@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
 
-# <markdowncell>
+# coding: utf-8
 
 # #Statistical Inference for Everyone: Technical Supplement
 # 
@@ -12,12 +10,10 @@
 # <img  src="http://web.bryant.edu/~bblais/images/Saturn_with_Dice.png" align=center width = 250px />
 # 
 # [Statistical Inference for Everyone]: http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html
-
-# <markdowncell>
+# 
 
 # ## Estimating the Ratio of Two Variances $\kappa\equiv \sigma_x^2/\sigma_y^2$
-
-# <markdowncell>
+# 
 
 # $\newcommand{\bvec}[1]{\mathbf{#1}}$
 # 
@@ -34,29 +30,29 @@
 # Changing variables to $\kappa\equiv \sigma_x^2/\sigma_y^2$, we have the
 # following definitions
 # \begin{eqnarray}
-# \kappa&\equiv& \sigma_x^2/\sigma_y^2 \\
-# \sigma_x&=&\sigma_y \kappa^{1/2} \\
+# \kappa&\equiv& \sigma_x^2/\sigma_y^2 \\\\
+# \sigma_x&=&\sigma_y \kappa^{1/2} \\\\
 # \sigma_y&=&\sigma_x \kappa^{-1/2}
 # \end{eqnarray}
 # and then transform the posterior
 # \begin{eqnarray}
 # p(\kappa,\sigma_x|\bvec{x},\bvec{y},I)&=&
 #    p(\sigma_x,\sigma_y|\bvec{x},\bvec{y},I)\times
-#    \left|\frac{\partial(\sigma_x,\sigma_y)}{\partial(\kappa,\sigma_x)}\right| \\
+#    \left|\frac{\partial(\sigma_x,\sigma_y)}{\partial(\kappa,\sigma_x)}\right| \\\\
 # &=&   p(\sigma_x,\sigma_y|\bvec{x},\bvec{y},I)\times
 # \left| \begin{array}{cc}
 #     \frac{\partial\sigma_x}{\partial \kappa} & \frac{\partial
-# \sigma_x}{\partial \sigma_x}\\ 
+# \sigma_x}{\partial \sigma_x}\\\\ 
 #     \frac{\partial\sigma_y}{\partial \kappa} & \frac{\partial
-# \sigma_y}{\partial \sigma_x} \\
+# \sigma_y}{\partial \sigma_x} \\\\
 #   \end{array}
-#     \right|\\
+#     \right|\\\\
 # &=&   p(\sigma_x,\sigma_y|\bvec{x},\bvec{y},I)\times
 # \left| \begin{array}{cc}
-#     \frac{1}{2}\sigma_y \kappa^{-1/2} & 1 \\
+#     \frac{1}{2}\sigma_y \kappa^{-1/2} & 1 \\\\
 #     -\frac{1}{2}\sigma_x \kappa^{-3/2} & 0 
 #   \end{array}
-#     \right|\\
+#     \right|\\\\
 # &\propto&\frac{1}{\sigma_x^{n}}\frac{\kappa^{m/2}}{\sigma_x^{m}}
 # e^{-V_x/2\sigma_x^2}e^{-V_y\kappa/2\sigma_x^2} \sigma_x \kappa^{-3/2}
 # \end{eqnarray}
@@ -64,7 +60,7 @@
 # 
 # \begin{eqnarray}
 # p(\kappa|\bvec{x},\bvec{y},I)&=&\int d\sigma_x
-# p(\kappa,\sigma_x|\bvec{x},\bvec{y},I) \\
+# p(\kappa,\sigma_x|\bvec{x},\bvec{y},I) \\\\
 # &\propto& \kappa^{(m-3)/2} \int d\sigma_x \frac{1}{\sigma_x^{n+m-1}}
 # e^{-(V_x+V_y\kappa)/2\sigma_x^2}
 # \end{eqnarray}
@@ -77,8 +73,8 @@
 # 
 # A more common form is found with the substitutions
 # \begin{eqnarray}
-# \eta &\equiv&\kappa\times \frac{(V_y/f_y)}{(V_x/f_x)} \\
-# f_x&\equiv&n-1 \\
+# \eta &\equiv&\kappa\times \frac{(V_y/f_y)}{(V_x/f_x)} \\\\
+# f_x&\equiv&n-1 \\\\
 # f_y&\equiv&m-1
 # \end{eqnarray}
 # 
@@ -90,12 +86,11 @@
 # which is the commonly used F distribution.
 # 
 # 
-
-# <markdowncell>
+# 
 
 # ---------------------
 
-# <codecell>
+# In[8]:
 
 from IPython.core.display import HTML
 
