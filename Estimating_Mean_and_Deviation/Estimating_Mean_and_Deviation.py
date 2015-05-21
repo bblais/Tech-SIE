@@ -29,7 +29,7 @@
 # parameter we are interested in.  If we are estimating the mean, we need to
 # integrate out the standard deviation, and vice versa:
 # \begin{eqnarray}
-# p(\mu|\bvec{x},I)&=&\int_0^{\infty} p(\mu,\sigma|\bvec{x},I) d\sigma \\
+# p(\mu|\bvec{x},I)&=&\int_0^{\infty} p(\mu,\sigma|\bvec{x},I) d\sigma \\\\
 # p(\sigma|\bvec{x},I)&=&\int_{-\infty}^{\infty} p(\mu,\sigma|\bvec{x},I) d\mu 
 # \end{eqnarray}
 # 
