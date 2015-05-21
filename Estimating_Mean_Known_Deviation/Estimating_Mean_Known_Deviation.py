@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
 
-# <markdowncell>
+# coding: utf-8
 
 # #Statistical Inference for Everyone: Technical Supplement
 # 
@@ -12,17 +10,13 @@
 # <img  src="http://web.bryant.edu/~bblais/images/Saturn_with_Dice.png" align=center width = 250px />
 # 
 # [Statistical Inference for Everyone]: http://web.bryant.edu/~bblais/statistical-inference-for-everyone-sie.html
-
-# <markdowncell>
+# 
 
 # ## Estimating Mean, Known Deviation
-
-# <markdowncell>
+# 
 
 # This derivation is taken directly from (Sivia, 1996), with some of the steps
 # filled in and elaborated by me.
-
-# <markdowncell>
 
 # ### Introducing the Distributions
 # 
@@ -73,8 +67,7 @@
 # \end{eqnarray}
 # 
 # The Gaussian, or Normal distribution, is justified from maximum entropy arguments.
-
-# <markdowncell>
+# 
 
 # ## An Aside on Log Posterior
 # 
@@ -105,8 +98,7 @@
 # So, under the Gaussian posterior assumption, then the width of the posterior
 # distribution is related to the second derivative of the log posterior.  
 # 
-
-# <markdowncell>
+# 
 
 # ## Continuing
 # 
@@ -156,15 +148,16 @@
 # \end{eqnarray}
 # 
 # 
+# 
 
-# <codecell>
+# In[7]:
 
 
-# <markdowncell>
+
 
 # ---------------------
 
-# <codecell>
+# In[8]:
 
 from IPython.core.display import HTML
 
@@ -174,6 +167,8 @@ def css_styling():
     return HTML(styles)
 css_styling()
 
-# <codecell>
+
+# In[8]:
+
 
 
