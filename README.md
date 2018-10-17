@@ -1,4 +1,4 @@
-#Statistical Inference for Everyone: Technical Supplement
+# Statistical Inference for Everyone: Technical Supplement
 
 
 
